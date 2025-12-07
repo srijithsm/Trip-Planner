@@ -1,0 +1,24 @@
+/* App.css */
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Optional: Center the app contents if you add more later */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Smooth transition for page elements */
+* {
+  transition: all 0.3s ease-in-out;
+}

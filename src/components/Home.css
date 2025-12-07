@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw; /* Make container full screen */
+    overflow: hidden;
+    flex: 1;
+    background-image: url('/Background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Right side with text and buttons */
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-end; /* Align content to the right */
+    position: relative;
+    height: 100vh;
+}
+
+/* Buttons at top right */
+.button-group {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.signup-button,
+.login-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #f9749c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.login-button {
+    background-color: #08677c;
+}
+
+.signup-button:hover,
+.login-button:hover {
+    transform: scale(1.05);
+}
+
+/* Text in right side */
+.text-container {
+    text-align: right;
+    color: #0d0d0d;
+    font-size: 5rem; /* Large text */
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.text-line {
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInLine 2s forwards;
+}
+
+/* Hurry up should appear first */
+.text-line.hurry-up {
+    animation-delay: 0s; /* Immediately */
+}
+
+/* Book your trip should appear after */
+.text-line.book-trip {
+    animation-delay: 1.5s; /* After 1.5 seconds */
+}
+
+/* Animation */
+@keyframes fadeInLine {
+    0% {
+        opacity: 0;
+        transform: translateX(50px); /* Slight slide-in effect */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
